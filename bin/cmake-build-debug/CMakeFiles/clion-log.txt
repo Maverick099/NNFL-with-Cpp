@@ -1,0 +1,4 @@
+C:\Users\samar\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\202.7319.72\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - NMake Makefiles" "D:\work_src\Medium Coders Asylum\nnfl_with_cpp\NNFL-with-Cpp\bin"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/work_src/Medium Coders Asylum/nnfl_with_cpp/NNFL-with-Cpp/bin/cmake-build-debug

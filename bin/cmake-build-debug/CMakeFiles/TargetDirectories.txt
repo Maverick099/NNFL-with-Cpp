@@ -1,0 +1,3 @@
+D:/work_src/Medium Coders Asylum/nnfl_with_cpp/NNFL-with-Cpp/bin/cmake-build-debug/CMakeFiles/bin.dir
+D:/work_src/Medium Coders Asylum/nnfl_with_cpp/NNFL-with-Cpp/bin/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/work_src/Medium Coders Asylum/nnfl_with_cpp/NNFL-with-Cpp/bin/cmake-build-debug/CMakeFiles/rebuild_cache.dir
