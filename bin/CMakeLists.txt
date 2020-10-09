@@ -3,4 +3,4 @@ project(bin)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(bin main.cpp)
+add_executable(bin main.cpp McCullochPitts_NeuronModel.h)
