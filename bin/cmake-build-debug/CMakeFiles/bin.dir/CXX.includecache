@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/work_src/Medium Coders Asylum/nnfl_with_cpp/NNFL-with-Cpp/bin/McCullochPitts_NeuronModel.h
+iostream
+-
+string
+-
+cassert
+-
+cmath
+-
+utility
+-
+
+D:/work_src/Medium Coders Asylum/nnfl_with_cpp/NNFL-with-Cpp/bin/main.cpp
+iostream
+-
+McCullochPitts_NeuronModel.h
+D:/work_src/Medium Coders Asylum/nnfl_with_cpp/NNFL-with-Cpp/bin/McCullochPitts_NeuronModel.h
+

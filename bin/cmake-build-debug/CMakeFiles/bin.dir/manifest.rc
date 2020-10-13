@@ -1,0 +1,2 @@
+#pragma code_page(65001)
+1 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "D:/work_src/Medium Coders Asylum/nnfl_with_cpp/NNFL-with-Cpp/bin/cmake-build-debug/CMakeFiles/bin.dir/embed.manifest"

@@ -1,10 +1,8 @@
 //
 // Created by Adithya aka Maverick099 on 09-10-2020.
 //
-
 /// This is a simple neural model based on the McCulloch and Pits model 1943
 /// This model is used to implement simple gates such as logical and, or and not
-
 #ifndef BIN_MCCULLOCHPITTS_NEURONMODEL_H
 #define BIN_MCCULLOCHPITTS_NEURONMODEL_H
 
@@ -17,10 +15,9 @@
 using namespace std;
 
 // Default weight and threshold values
-unsigned int threshold_value = 15;
-unsigned int weight1 = -10;
-unsigned int weight2 = 10;
-string activationFunc;
+float threshold_value = 15;
+float weight1 = 10;
+float weight2 = -10;
 
 string transformToLowerCase(string text) {
     string returnText;
@@ -39,18 +36,20 @@ string transformToLowerCase(string text) {
 // 2) Sigmoid Activation function
 // the default activation function is kept as sigmoid function.
 
-unsigned linearFunction(unsigned x) {
+float linearFunction(float x) {
+    cout << "[:)] Running with Linear Function as Activation Function." << endl;
     return x;
 
 }
 
-int thresholdFunction(unsigned x) {
-    int threshold = 0;
+float thresholdFunction(float x) {
+    float threshold = 0;
     if (x >= 0) {
         threshold = 1;
     } else if (x < 0) {
         threshold = 0;
     }
+    cout << "[:)] Running with Threshold Function as Activation Function." << endl;
     return threshold;
 }
 
@@ -59,36 +58,38 @@ float sigmoidFunction(float x) {
     float sigmoid;
     exponential = exp(-x);
     sigmoid = 1 / (1 + exponential);
+    cout << "[:)] Running with Sigmoid Function as Activation Function." << endl;
     return sigmoid;
 }
 
-void setWeights(unsigned int weight_1, unsigned int weight_2) {
+void setWeights(float weight_1, float weight_2) {
     weight1 = weight_1;
     weight_2 = weight_2;
 }
 
+void setThreshold(float threshold) {
+    threshold_value = threshold;
+}
 
 int throwActivationFunction(string activeFunc) {
     int switchCase = 0;
     string actFunc = move(activeFunc);
     if (actFunc == "sigmoid" || actFunc.empty()) {
         switchCase = 0;
-        cout << "[:)] Running with Sigmoid Function as Activation Function." << endl;
     } else if (actFunc == "linear") {
         switchCase = 1;
-        cout << "[:)] Running with Linear Function as Activation Function." << endl;
     } else if (actFunc == "threshold") {
         switchCase = 2;
-        cout << "[:)] Running with Threshold Function as Activation Function." << endl;
+    } else {
+        switchCase = 0;
     }
-
     return switchCase;
 }
 
-int notGate(int input, const string &activationFunction) {
+float notGate(float input, const string &activationFunction) {
 
-    int answer;
-    unsigned calc;
+    float answer;
+    float calc;
     const string &actFunc = activationFunction;
     try {
         if (input == 1 || input == 0) {
@@ -107,20 +108,17 @@ int notGate(int input, const string &activationFunction) {
     switch (throwActivationFunction(actFunc)) {
         case 0:
             answer = sigmoidFunction(calc);
+            break;
         case 1:
             answer = linearFunction(calc);
+            break;
         case 2:
             answer = thresholdFunction(calc);
+            break;
     }
 
+    cout << "Computing with weights:" << weight1 << " and Threshold Value:" << threshold_value << endl;
     return answer;
 }
-
-
-int andGate(int input1, int input2) {
-
-    return 0;
-}
-
 
 #endif //BIN_MCCULLOCHPITTS_NEURONMODEL_H
