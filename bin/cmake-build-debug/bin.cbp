@@ -85,6 +85,9 @@
 		<Unit filename="D:/work_src/Medium Coders Asylum/nnfl_with_cpp/NNFL-with-Cpp/bin/McCullochPitts_NeuronModel.h">
 			<Option target="bin"/>
 		</Unit>
+		<Unit filename="D:/work_src/Medium Coders Asylum/nnfl_with_cpp/NNFL-with-Cpp/bin/PerceptronLearning.h">
+			<Option target="bin"/>
+		</Unit>
 		<Unit filename="D:/work_src/Medium Coders Asylum/nnfl_with_cpp/NNFL-with-Cpp/bin/main.cpp">
 			<Option target="bin"/>
 		</Unit>
