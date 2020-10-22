@@ -6,6 +6,8 @@
 #define BIN_PERCEPTRONLEARNING_H
 
 
-
+void changeWeight(){
+    
+}
 
 #endif //BIN_PERCEPTRONLEARNING_H
